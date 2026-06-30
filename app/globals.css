@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-cream text-ink antialiased;
+    font-feature-settings: "ss01", "kern", "liga";
+  }
+  ::selection { @apply bg-kom text-cream; }
+}
+
+@layer components {
+  /* Small all-caps label */
+  .eyebrow {
+    @apply font-sans text-[0.7rem] uppercase tracking-wider2 text-ink-soft;
+  }
+
+  /* Primary CTA — solid ink, hover to KOM red */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-ink px-7 py-3.5 font-sans text-sm uppercase tracking-wider2 text-cream transition-colors hover:bg-kom focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kom;
+  }
+  /* Ghost CTA */
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 border border-ink/80 px-7 py-3.5 font-sans text-sm uppercase tracking-wider2 text-ink transition-colors hover:border-kom hover:text-kom focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kom;
+  }
+  /* Inverse CTA — sits on dark photo */
+  .btn-light {
+    @apply inline-flex items-center gap-2 border border-cream/70 px-7 py-3.5 font-sans text-sm uppercase tracking-wider2 text-cream transition-colors hover:bg-cream hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cream;
+  }
+
+  /* Section spacing — generous to let photos breathe */
+  .section {
+    @apply px-6 py-24 sm:px-10 sm:py-32 lg:px-16;
+  }
+
+  /* Display heading — Cormorant variable */
+  .display-h1 {
+    @apply font-display text-5xl font-light leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl xl:text-8xl;
+  }
+  .display-h2 {
+    @apply font-display text-4xl font-light leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl;
+  }
+  .display-h3 {
+    @apply font-display text-3xl font-light leading-tight tracking-tight sm:text-4xl;
+  }
+
+  /* Climb data strip — small mono stats */
+  .climb-data {
+    @apply font-sans text-xs uppercase tracking-wider2 text-ink-soft;
+  }
+}
