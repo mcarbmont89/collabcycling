@@ -1,14 +1,14 @@
 import "./globals.css";
-import { Archivo, Inter } from "next/font/google";
+import { Montserrat, DM_Sans } from "next/font/google";
 
-const display = Archivo({
+const display = Montserrat({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
   variable: "--font-display",
   display: "swap",
 });
 
-const sans = Inter({
+const sans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
