@@ -20,27 +20,25 @@ export default function NewsletterForm({ dict }: { dict: Dictionary }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="grid gap-3" noValidate>
+    <form onSubmit={handleSubmit} className="grid gap-4" noValidate>
       <label className="eyebrow text-cream/70" htmlFor="newsletter-email">
         {dict.footer.newsletter}
       </label>
-      <div className="flex items-center gap-3 border-b border-cream/30 pb-2">
-        <input
-          id="newsletter-email"
-          name="email"
-          type="email"
-          required
-          placeholder={dict.footer.emailPlaceholder}
-          className="flex-1 bg-transparent text-sm text-cream outline-none placeholder:text-cream/40"
-        />
-        <button
-          type="submit"
-          aria-label={dict.common.submit}
-          className="text-cream/70 transition-colors hover:text-cream"
-        >
-          <ArrowRight className="h-4 w-4" />
-        </button>
-      </div>
+      <input
+        id="newsletter-email"
+        name="email"
+        type="email"
+        required
+        placeholder={dict.footer.emailPlaceholder}
+        className="w-full rounded-full border border-cream/20 bg-cream/5 px-5 py-3 text-sm text-cream outline-none transition-colors placeholder:text-cream/40 focus:border-kom"
+      />
+      <button
+        type="submit"
+        className="inline-flex items-center justify-center gap-2 rounded-full bg-kom px-7 py-3 font-display text-sm font-semibold text-cream transition-colors hover:bg-kom-deep"
+      >
+        {dict.common.submit}
+        <ArrowRight className="h-4 w-4" />
+      </button>
       {status === "sent" && (
         <p className="text-xs text-cream/60">{dict.newsletter.success}</p>
       )}

@@ -33,8 +33,10 @@ export default function SiteHeader({
             className="h-10 w-auto"
             priority
           />
-          <span className="hidden font-display text-xl tracking-tight sm:inline">
-            Collab Cycling
+          <span className="hidden font-display text-base font-extrabold uppercase leading-[0.95] tracking-tight sm:inline">
+            Collab
+            <br />
+            Cycling
           </span>
         </Link>
 
@@ -42,7 +44,7 @@ export default function SiteHeader({
         <nav className="hidden items-center gap-8 lg:flex">
           <Link
             href={`${base}/training-camps`}
-            className="font-sans text-xs uppercase tracking-wider2 text-ink-soft transition-colors hover:text-kom"
+            className="font-display text-sm font-bold uppercase tracking-wide text-ink transition-colors hover:text-kom"
           >
             {dict.nav.trainingCamps}
           </Link>
@@ -56,7 +58,7 @@ export default function SiteHeader({
             <button
               type="button"
               onClick={() => setInfoOpen((v) => !v)}
-              className="flex items-center gap-1 font-sans text-xs uppercase tracking-wider2 text-ink-soft transition-colors hover:text-kom"
+              className="flex items-center gap-1 font-display text-sm font-bold uppercase tracking-wide text-ink transition-colors hover:text-kom"
               aria-expanded={infoOpen}
             >
               {dict.nav.information}
@@ -76,7 +78,7 @@ export default function SiteHeader({
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="block px-5 py-3 text-xs uppercase tracking-wider2 text-ink-soft transition-colors hover:bg-cream-deep hover:text-kom"
+                    className="block px-5 py-3 font-display text-xs font-semibold uppercase tracking-wide text-ink-soft transition-colors hover:bg-cream-deep hover:text-kom"
                     role="menuitem"
                   >
                     {item.label}
@@ -88,7 +90,7 @@ export default function SiteHeader({
 
           <Link
             href={`${base}/collaborators`}
-            className="font-sans text-xs uppercase tracking-wider2 text-ink-soft transition-colors hover:text-kom"
+            className="font-display text-sm font-bold uppercase tracking-wide text-ink transition-colors hover:text-kom"
           >
             {dict.nav.collaborators}
           </Link>
@@ -96,7 +98,7 @@ export default function SiteHeader({
             href={site.challenge}
             target="_blank"
             rel="noreferrer"
-            className="font-sans text-xs uppercase tracking-wider2 text-kom transition-colors hover:text-kom-deep"
+            className="font-display text-sm font-bold uppercase tracking-wide text-kom transition-colors hover:text-kom-deep"
           >
             {dict.nav.challenge} ↗
           </a>

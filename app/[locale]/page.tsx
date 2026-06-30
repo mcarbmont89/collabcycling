@@ -27,20 +27,20 @@ export default function Home({ params }: { params: { locale: string } }) {
         {/* Gradient mask for legibility */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/70" />
 
-        <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-20 sm:px-10 sm:pb-28 lg:px-16">
-          <h1 className="display-h1 max-w-4xl text-cream">{dict.home.heroTitle}</h1>
-          <p className="mt-6 max-w-xl font-display text-xl italic text-cream/80 sm:text-2xl">
+        <div className="relative z-10 mx-auto flex h-full max-w-4xl flex-col items-center justify-center px-6 text-center sm:px-10 lg:px-16">
+          <h1 className="display-h1 uppercase text-cream">{dict.home.heroTitle}</h1>
+          <p className="mt-6 max-w-xl text-lg text-cream/85 sm:text-xl">
             {dict.home.heroLine}
           </p>
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <a href={site.challenge} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-kom px-8 py-3.5 font-display text-sm font-semibold text-cream transition-colors hover:bg-kom-deep">
+              {dict.common.joinChallenge}
+              <ArrowUpRight className="h-4 w-4" />
+            </a>
             <Link href={`${base}/alps-valloire`} className="btn-light">
               {dict.common.discoverMore}
               <ArrowRight className="h-4 w-4" />
             </Link>
-            <a href={site.challenge} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-kom px-7 py-3.5 font-sans text-sm uppercase tracking-wider2 text-cream transition-colors hover:bg-kom-deep">
-              {dict.common.joinChallenge}
-              <ArrowUpRight className="h-4 w-4" />
-            </a>
           </div>
         </div>
       </section>
@@ -74,7 +74,7 @@ export default function Home({ params }: { params: { locale: string } }) {
           <div className="absolute inset-0 mx-auto flex h-full max-w-7xl items-end px-6 pb-16 sm:px-10 lg:px-16">
             <div className="max-w-2xl">
               <p className="eyebrow text-cream/70">{dict.home.tdf.eyebrow}</p>
-              <h2 className="mt-4 font-display text-3xl font-light leading-tight text-cream sm:text-4xl lg:text-5xl">
+              <h2 className="mt-4 font-display text-3xl font-extrabold leading-tight tracking-tight text-cream sm:text-4xl lg:text-5xl">
                 {dict.home.tdf.heading}
               </h2>
               <p className="mt-5 max-w-xl text-base leading-relaxed text-cream/80">
@@ -90,13 +90,13 @@ export default function Home({ params }: { params: { locale: string } }) {
         <div className="mx-auto max-w-7xl">
           <p className="eyebrow">{dict.home.bigStatement.label}</p>
           <div className="mt-12 grid gap-2 sm:grid-cols-3 sm:items-baseline sm:gap-10">
-            <p className="font-display text-6xl font-light italic sm:text-7xl lg:text-8xl">
+            <p className="font-display text-6xl font-extrabold uppercase tracking-tight sm:text-7xl lg:text-8xl">
               {dict.home.bigStatement.train}
             </p>
-            <p className="font-display text-6xl font-light italic text-ink-soft sm:text-7xl lg:text-8xl">
+            <p className="font-display text-6xl font-extrabold uppercase tracking-tight text-ink-soft sm:text-7xl lg:text-8xl">
               {dict.home.bigStatement.ride}
             </p>
-            <p className="font-display text-7xl font-medium uppercase tracking-tight text-kom sm:text-8xl lg:text-9xl">
+            <p className="font-display text-7xl font-black uppercase tracking-tight text-kom sm:text-8xl lg:text-9xl">
               {dict.home.bigStatement.conquer}
             </p>
           </div>

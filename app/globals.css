@@ -14,20 +14,20 @@
 @layer components {
   /* Small all-caps label */
   .eyebrow {
-    @apply font-sans text-[0.7rem] uppercase tracking-wider2 text-ink-soft;
+    @apply font-display text-[0.7rem] font-bold uppercase tracking-wider2 text-ink-soft;
   }
 
-  /* Primary CTA — solid ink, hover to KOM red */
+  /* Primary CTA — solid ink pill, hover to brand violet */
   .btn-primary {
-    @apply inline-flex items-center gap-2 bg-ink px-7 py-3.5 font-sans text-sm uppercase tracking-wider2 text-cream transition-colors hover:bg-kom focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kom;
+    @apply inline-flex items-center gap-2 rounded-full bg-ink px-8 py-3.5 font-display text-sm font-semibold text-cream transition-colors hover:bg-kom focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kom;
   }
   /* Ghost CTA */
   .btn-ghost {
-    @apply inline-flex items-center gap-2 border border-ink/80 px-7 py-3.5 font-sans text-sm uppercase tracking-wider2 text-ink transition-colors hover:border-kom hover:text-kom focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kom;
+    @apply inline-flex items-center gap-2 rounded-full border border-ink/80 px-8 py-3.5 font-display text-sm font-semibold text-ink transition-colors hover:border-kom hover:bg-kom hover:text-cream focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-kom;
   }
   /* Inverse CTA — sits on dark photo */
   .btn-light {
-    @apply inline-flex items-center gap-2 border border-cream/70 px-7 py-3.5 font-sans text-sm uppercase tracking-wider2 text-cream transition-colors hover:bg-cream hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cream;
+    @apply inline-flex items-center gap-2 rounded-full border border-cream/70 px-8 py-3.5 font-display text-sm font-semibold text-cream transition-colors hover:bg-cream hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cream;
   }
 
   /* Section spacing — generous to let photos breathe */
@@ -35,19 +35,19 @@
     @apply px-6 py-24 sm:px-10 sm:py-32 lg:px-16;
   }
 
-  /* Display heading — Cormorant variable */
+  /* Display heading — Archivo bold grotesque */
   .display-h1 {
-    @apply font-display text-5xl font-light leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl xl:text-8xl;
+    @apply font-display text-5xl font-extrabold leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl xl:text-8xl;
   }
   .display-h2 {
-    @apply font-display text-4xl font-light leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl;
+    @apply font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl;
   }
   .display-h3 {
-    @apply font-display text-3xl font-light leading-tight tracking-tight sm:text-4xl;
+    @apply font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl;
   }
 
   /* Climb data strip — small mono stats */
   .climb-data {
-    @apply font-sans text-xs uppercase tracking-wider2 text-ink-soft;
+    @apply font-display text-xs font-semibold uppercase tracking-wider2 text-ink-soft;
   }
 }

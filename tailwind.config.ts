@@ -5,22 +5,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Warm cream that doesn't fight with photography
-        cream: "#F4F0E8",
-        "cream-deep": "#E8E0D2",
-        // Warm near-black, not pure
-        ink: "#1A1814",
-        "ink-soft": "#3D362E",
-        // KOM red — terracotta, warmer than orange neon
-        kom: "#C24B1E",
-        "kom-deep": "#8E3614",
+        // Cool near-white, matching the reference's bright sections
+        cream: "#F7F6F4",
+        "cream-deep": "#ECEAE6",
+        // Cool near-black / deep navy used in the footer
+        ink: "#16141C",
+        "ink-soft": "#4A4654",
+        // Brand accent — the reference's violet CTA color
+        kom: "#6C5CE7",
+        "kom-deep": "#5546C9",
         // Alpine moss for secondary accent
         moss: "#3E5C50",
         // Off-white card backgrounds
-        bone: "#FAF7F1",
+        bone: "#FFFFFF",
       },
       fontFamily: {
-        display: ["var(--font-display)", "Georgia", "serif"],
+        display: ["var(--font-display)", "system-ui", "sans-serif"],
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
       letterSpacing: {

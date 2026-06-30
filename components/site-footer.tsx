@@ -27,7 +27,7 @@ export default function SiteFooter({
               height={40}
               className="h-10 w-auto brightness-0 invert"
             />
-            <span className="font-display text-xl">Collab Cycling</span>
+            <span className="font-display text-xl font-extrabold uppercase tracking-tight">Collab Cycling</span>
           </Link>
           <p className="mt-5 max-w-xs text-sm text-cream/70">{dict.footer.tagline}</p>
 
